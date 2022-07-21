@@ -1,12 +1,12 @@
 // const SERVER_NAME = "172.27.229.36:3007"; // HNI
-const SERVER_NAME = "172.27.40.196:3007"; // HCM
+// const SERVER_NAME = "172.27.40.196:3007"; // HCM
 // const SERVER_NAME = "hcm-isurvey.ast.fpt.net"; // HCM
 // const SERVER_NAME = "172.27.40.196:3077"; // THICHPV TEST
 // const SERVER_NAME = "192.168.1.221:3000";
 // const SERVER_NAME = "172.27.131.236:3000";
-// const SERVER_NAME = "isurvey.ast.fpt.net";
+const SERVER_NAME = "isurvey.ast.fpt.net";
 // const SERVER_NAME = "172.27.187.140:3000";
-const PROTOCOL = "http";
+const PROTOCOL = "https";
 const SERVER_URL = "$PROTOCOL://$SERVER_NAME";
 const GET_TOKEN = "XGdO7A9jvwng2iLxHLZ9bWiQ46yHGpR4";
 const POST_TOKEN =
