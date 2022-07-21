@@ -192,10 +192,14 @@ class ActionBox extends StatelessWidget {
                     "data:image/png;base64," + signatureEncoded;
                 final saved = await ApiService.saveSignatureTicket(params);
                 if (saved) {
-                  final checkinTicket = await ApiService.checkinTicket(ticket.id);
+                  final checkinTicket =
+                      await ApiService.checkinTicket(ticket.id);
                   Navigator.of(context).pushReplacementNamed(
-                    CheckinCheckoutScreen.routerName,
-                    arguments: {'ticket': checkinTicket});
+                      CheckinCheckoutScreen.routerName,
+                      arguments: {
+                        'ticket': checkinTicket,
+                        'showCheckout': false
+                      });
                 }
               } catch (error) {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(

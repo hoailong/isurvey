@@ -1,13 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_isurvey/screens/loading-ticket-screen.dart';
-import 'package:flutter_isurvey/screens/slide-screen.dart';
 import 'package:flutter_isurvey/constants.dart';
 import 'package:flutter_isurvey/screens/check-ticket-screen.dart';
 import 'package:flutter_isurvey/screens/checkin-checkout-screen.dart';
-import 'package:flutter_isurvey/screens/qr-scanner-screen.dart';
+import 'package:flutter_isurvey/screens/loading-ticket-screen.dart';
 import 'package:flutter_isurvey/screens/signature-screen.dart';
+import 'package:flutter_isurvey/screens/slide-screen.dart';
 import 'package:flutter_isurvey/screens/ticket-info-screen.dart';
 import 'package:flutter_isurvey/screens/vote-screen.dart';
 import 'package:flutter_isurvey/screens/vote-success-screen.dart';

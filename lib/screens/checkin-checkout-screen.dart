@@ -23,6 +23,7 @@ class CheckinCheckoutScreen extends StatefulWidget {
 class _CheckinCheckoutScreenState extends State<CheckinCheckoutScreen> {
   Timer _timer;
   Ticket ticket;
+  bool showCheckout;
 
   @override
   void initState() {
@@ -30,7 +31,7 @@ class _CheckinCheckoutScreenState extends State<CheckinCheckoutScreen> {
     super.initState();
     Future.delayed(Duration.zero, () {
       setState(() {
-        Map<String, Ticket> arguments =
+        Map<String, dynamic> arguments =
             ModalRoute.of(context).settings.arguments;
         ticket = arguments['ticket'];
       });
@@ -49,8 +50,9 @@ class _CheckinCheckoutScreenState extends State<CheckinCheckoutScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Map<String, Ticket> arguments = ModalRoute.of(context).settings.arguments;
+    Map<String, dynamic> arguments = ModalRoute.of(context).settings.arguments;
     this.ticket = arguments['ticket'];
+    this.showCheckout = arguments['showCheckout'] ?? true;
     return Scaffold(
       endDrawer: DrawerSetting(),
       body: Padding(
@@ -103,7 +105,7 @@ class _CheckinCheckoutScreenState extends State<CheckinCheckoutScreen> {
             SizedBox(
               height: 20,
             ),
-            if (ticket.status == 1)
+            if (ticket.status == 1 && showCheckout == true)
               ButtonWidget(
                 text: "CHECK OUT",
                 onTap: () {
@@ -111,11 +113,17 @@ class _CheckinCheckoutScreenState extends State<CheckinCheckoutScreen> {
                     if (ticket.error != null) {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: Colors.red,
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                         content: Text(
-                          'something_was_error'.tr() + " \"" + ticket.error + "\"",
+                          'something_was_error'.tr() +
+                              " \"" +
+                              ticket.error +
+                              "\"",
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
                         ).tr(),
                       ));
                     } else {

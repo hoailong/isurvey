@@ -226,10 +226,11 @@ class TicketInfo extends StatelessWidget {
                           EdgeInsets.symmetric(vertical: 12, horizontal: 62),
                       alignment: Alignment.center,
                       child: Text('no',
-                          style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white)).tr())
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white))
+                          .tr())
                 ]),
                 Column(children: [
                   Container(
@@ -309,13 +310,220 @@ class TicketInfo extends StatelessWidget {
                         padding:
                             EdgeInsets.symmetric(vertical: 12, horizontal: 60),
                         alignment: Alignment.center,
-                        child: Text('${ticket.accessInfo.guests[i].cardNo.join('\n')}',
+                        child: Text(
+                            '${ticket.accessInfo.guests[i].cardNo.join('\n')}',
                             style:
                                 TextStyle(fontSize: 20, color: Colors.white)))
                   ]),
                 ])
             ],
           ),
+          SizedBox(
+            height: 50,
+          ),
+          Text(
+            'general_provisions_apply_to_dc_access_customers',
+            style: TextStyle(
+                fontSize: 26, fontWeight: FontWeight.bold, color: Colors.white),
+          ).tr(),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'rule1',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule2',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule3',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                  decoration:
+                      BoxDecoration(border: Border.all(color: Colors.white)),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              'rule31',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ).tr(),
+                          ),
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              'rule32',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ).tr(),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'rule33',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ).tr(),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              'rule34',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ).tr(),
+                          ),
+                          Expanded(
+                            flex: 3,
+                            child: Text(
+                              'rule35',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ).tr(),
+                          ),
+                          Expanded(
+                            flex: 2,
+                            child: Text(
+                              'rule36',
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.white),
+                            ).tr(),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule4',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule5',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule6',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule7',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule71',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'rule72',
+                  textAlign: TextAlign.left,
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ).tr(),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            'commitment_of_customers_access',
+            style: TextStyle(
+                fontSize: 26, fontWeight: FontWeight.bold, color: Colors.white),
+          ).tr(),
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'commitment1',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    ).tr(),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ]))
         ],
       ),
     );
